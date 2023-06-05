@@ -21,6 +21,10 @@ public class Consola {
         return sc.nextLine();
     }
     
+    public void Write(String msg) {
+        System.out.println(msg);
+    }
+    
     public int ReadInt(String msg) {
         System.out.println(msg);
         int number = sc.nextInt();

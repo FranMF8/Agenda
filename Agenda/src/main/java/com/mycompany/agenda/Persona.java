@@ -9,23 +9,40 @@ package com.mycompany.agenda;
  * @author corte
  */
 public class Persona {
+    private int id;
     private String firstName;
     private String lastName;
+    private Consola console = new Consola();
     
+    public int GetID() {
+        return this.id;
+    }
     
-    public String getFirstName(){
+    public void SetID(int pId) {
+        this.id = pId;
+    }
+    
+    public String GetFirstName(){
         return this.firstName;
     }
     
-    public void setFirstName(String fn) {
-        this.firstName = fn;
+    public void SetFirstName(String fN) {
+        this.firstName = fN;
     }
     
-    public String getLastName(){
+    public String GetLastName(){
         return this.lastName;
     }
     
-    public void setLastName(String ln) {
-        this.lastName = ln;
+    public void SetLastName(String lN) {
+        this.lastName = lN;
+    }
+    
+    public void MostrarPersona() {
+        console.Write("");
+        console.Write("DNI: " + this.GetID());
+        console.Write("Nombre: " + this.GetFirstName());
+        console.Write("Apellido: " + this.GetLastName());
+        console.Write("");
     }
 }
